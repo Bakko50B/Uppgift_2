@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-bg-color: #FCE7C8;    /* Färg*/
+    --header-color: #B1C29E;        /* Färg*/
+    --mainelement-color:    #fada7a8d;
+    --nav-color:   #FADA7A;         /* Färg*/
+    --hover-color: #f0a04ba8;
+    --active-color:#F0A04B;         /* Färg*/
+    --footer-color: #B1C29E;        /* Färg*/
+    --text-color: #333333;   
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+
+body {
+    font-family: "Roboto", serif;
+    display: flex;
+    background-color: var(--primary-bg-color);
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--header-color);
+    height: fit-content;
+}
+
+header h1 {
+    text-align: center;
+    margin: 2rem 0 2rem;
+    font-size: 4rem;
+}
+
+header ul {
+    background-color: var(--nav-color);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    /* margin: auto auto 0 auto; */
+}
+
+header ul li:hover {
+    background-color: var(--hover-color);
+}
+
+header ul li {
+    margin: 0;
+    /* display: inline-block; */
+}
+header ul li:active{
+    background-color: var(--active-color);
+}
+
+.activelink{
+    background-color: var(--active-color);
+}
+.activelink a {
+    /* color: rgb(82, 78, 78); */
+    /* font-style: italic; */
+    font-weight: 500;
+    letter-spacing: .15rem;
+}
+
+ul li a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+    padding: 0 2rem;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    background-color: var(--mainelement-color);
+    height: fit-content;
+    padding: 1rem 1rem 3rem 1rem;
+    height: fit-content;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: .05rem;
+}
+
+h2,
+h3{
+    margin: 1rem 0 .15rem 0; 
+}
+
+#starttitle {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 1rem auto .5rem; 
+}
+
+/* index-html*/
+#info {
+    border: 1px gray solid;
+    width: 80%;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 1rem ;
+    /* padding-left: 10rem; */
+    background-color: rgba(255, 255, 255, 0.402);
+    box-shadow: 10px 5px 25px rgba(37, 34, 34, 0.441);
+}
+#info ul{
+    margin-left: 1.5em;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.margintop{
+    margin-top: 2rem;
+}
+
+.imageholder {
+    text-align: center;
+    max-width: 100%;
+}
+
+.imageholder img {
+    max-width: 100%;
+}
+
+code{
+    background-color: rgba(255, 255, 255, 0.317);
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 2rem;
+    font-size: 1rem;
+    letter-spacing: .25rem;
+    border-radius: 10px;
+    padding: .5rem;
+}
+cite{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.indent{
+    margin-left: 1.3rem;  
+}
+footer {
+    background-color: var(--footer-color);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1140px;
+    height: 4em;
+    margin: 0 auto;
+    display: flex;
+    padding: 2rem 1rem;    
+    text-align: center;
+}
+
+#date{
+    display: inline;
+    margin: auto;
+}
+
+@media screen and (max-width: 1100px) {
+    #info{
+        width: 92%;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    #info{
+        width: 96%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: aqua;
+    }
+
+    header {
+        max-width: 100%;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    ul li a {
+        font-size: 1.8rem;
+        padding: 0.1rem;
+    }
+
+    main {
+        padding: .5rem;
+    }
+
+    #starttitle {
+        text-align: center;
+        font-size: 1.4rem;
+        margin: 1rem auto .5rem; 
+    }
+
+    p {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+        line-height: 1.35rem;
+        letter-spacing: normal;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    h3{
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    #info{
+        width: 98%;
+    }
+    code {
+        /* white-space: pre-wrap;  */
+        word-wrap: break-word; 
+        /* overflow-wrap: break-word;  */
+      }
+}
