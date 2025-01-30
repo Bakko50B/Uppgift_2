@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --primary-bg-color: #FCE7C8;    /* Färg*/
-    --header-color: #B1C29E;        /* Färg*/
-    --mainelement-color:    #fada7a8d;
-    --nav-color:   #FADA7A;         /* Färg*/
-    --hover-color: #f0a04ba8;
-    --active-color:#F0A04B;         /* Färg*/
-    --footer-color: #B1C29E;        /* Färg*/
+    --primary-bg-color: #f1f1f1;    /* Färg*/
+    --header-color: #c4c4c4;        /* Färg*/
+    --mainelement-color: #e7e7e7;
+    --infoelement-color:#fcfcfc; 
+    --nav-color:   #9b9b9b;         /* Färg*/
+    --hover-color: #d8d6d4a8;
+    --active-color:#b0b0b0;         /* Färg*/
+    --footer-color: #c4c4c4;        /* Färg*/
     --text-color: #333333;   
 
 }
@@ -126,7 +127,7 @@ h3{
     margin: 0 auto;
     padding: 1rem ;
     /* padding-left: 10rem; */
-    background-color: rgba(255, 255, 255, 0.402);
+    background-color: var(--infoelement-color);
     box-shadow: 10px 5px 25px rgba(37, 34, 34, 0.441);
 }
 #info ul{
@@ -178,6 +179,35 @@ footer {
     display: flex;
     padding: 2rem 1rem;    
     text-align: center;
+}
+
+#courseTable {
+    width: 100%;
+    line-height: 1.5rem;
+    
+}
+
+#courseTable th{
+    font-size: 1.5rem;
+    cursor: pointer;
+
+}
+
+
+#courseTable th:nth-child(2){
+    text-align: left;
+}
+
+#courseTable th:first-child,
+#courseTBody td:first-child{
+    text-align: left;
+    padding-right: auto;
+}
+
+
+#courseTable th:last-child,
+#courseTBody td:last-child{
+    text-align: right;
 }
 
 #date{

@@ -6,6 +6,26 @@ window.onload = () => {
     getCourses();
 }
 
+const myCourseCodeTHEL = document.getElementById("courseCode");
+const myCourseNameTHEL = document.getElementById("courseName");
+const myCourseProgressionTHEL = document.getElementById("courseProgression");
+
+if (myCourseCodeTHEL) {
+    myCourseCodeTHEL.addEventListener("click", () => {
+        alert("inne i myCourseCode");
+    });
+}
+if (myCourseNameTHEL) {
+    myCourseNameTHEL.addEventListener("click", () => {
+        alert("inne i myCourseName");
+    });
+}
+if (myCourseProgressionTHEL) {
+    myCourseProgressionTHEL.addEventListener("click", () => {
+        alert("inne i myCourseProgression");
+    });
+}
+
 async function getCourses() {
     try {
         const response = await fetch("https://webbutveckling.miun.se/files/ramschema_ht24.json");
@@ -16,23 +36,25 @@ async function getCourses() {
         console.table(courses);
         printCourses(courses);
     }
-    catch (error){
+    catch (error) {
         console.error(error);
         document.querySelector("#errormessage").innerHTML = "<p>Fel vid hämntning av informationen!</p>";
     }
 }
 
 
-function printCourses(data){
+function printCourses(data) {
     const myTbodyEl = document.getElementById("courseTBody");
 
-    myTbodyEl.innerHTML = "";
+    if (myTbodyEl) {
+        myTbodyEl.innerHTML = "";
 
-    data.forEach(row => { 
-        myTbodyEl.innerHTML += `<tr><td> ${row.code}</td> <td> ${row.coursename}</td> <td> ${row.progression}</td></tr>`;
+        data.forEach(row => {
+            myTbodyEl.innerHTML += `<tr><td> ${row.code}</td> <td> ${row.coursename}</td> <td> ${row.progression}</td></tr>`;
 
-        
-    });
+
+        });
+    }
 
 }
 
@@ -41,19 +63,19 @@ function printCourses(data){
 
 /* Datum i footern*/
 
-// const MyDateEl = document.getElementById("date");
-// const today = new Date();
-// const date = String(today.getDate()).padStart(2, '0');
-// const month = String(today.getMonth() + 1).padStart(2, '0'); // Månaderna är 0-indexerade, så vi lägger till 1
-// const year = today.getFullYear();
+const MyDateEl = document.getElementById("date");
+const today = new Date();
+const date = String(today.getDate()).padStart(2, '0');
+const month = String(today.getMonth() + 1).padStart(2, '0'); // Månaderna är 0-indexerade, så vi lägger till 1
+const year = today.getFullYear();
 
-// const fullDate = `${year}-${month}-${date}`;
+const fullDate = `${year}-${month}-${date}`;
 
 
-// MyDateEl.innerHTML =
-//     `    
-//     Dagens datum:   <br>
-//     ${fullDate}
-// `;
+MyDateEl.innerHTML =
+    `    
+    Dagens datum:   <br>
+    ${fullDate}
+`;
 
 /* Slut datum*/
