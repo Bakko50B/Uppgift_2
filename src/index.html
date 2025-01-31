@@ -42,9 +42,9 @@
 
             <table id="courseTable">
                 <thead>
-                    <th id="courseCode">Kurskod</th>
-                    <th id="courseName">Kursnamn</th>
-                    <th id="courseProgression">Progression</th>
+                    <th id="courseCode" data-column="code" >Kurskod</th>                    <!-- Använder data.column för att hämta värdet till sorteringen -->
+                    <th id="courseName" data-column="coursename">Kursnamn</th>              <!-- Använder data.column för att hämta värdet till sorteringen -->
+                    <th id="courseProgression" data-column="progression">Progression</th>   <!-- Använder data.column för att hämta värdet till sorteringen -->
                 </thead>
                 <tbody id="courseTBody"></tbody>
             </table>
