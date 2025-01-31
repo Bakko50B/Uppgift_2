@@ -5,7 +5,10 @@ let sortOrder = 1; // 1 = stigande, -1 = fallande
 
 window.onload = () => {
     getCourses();
+    document.getElementById("filter").addEventListener("input", filterData);
 }
+
+
 
 document.querySelectorAll("th[data-column]").forEach(th => {
     th.addEventListener("click", () => {
@@ -16,17 +19,19 @@ document.querySelectorAll("th[data-column]").forEach(th => {
 });
 
 function sortCourses(column) {
-    courses.sort((a, b) => {
-        let valA = a[column].toString().toLowerCase();
-        let valB = b[column].toString().toLowerCase();
+    
+    courses.sort((a, b) => (a[column] > b[column] ? sortOrder : -sortOrder));
+    //0courses.sort((a, b) => {
+    //    let valA = a[column];
+    //    let valB = b[column];
 
-        return valA > valB ? sortOrder : -sortOrder;
-    });
+      //  return valA > valB ? sortOrder : -sortOrder; //Om a[column] är större än b[column], returneras sortOrder  (1 eller -1 beroende på den aktuella sorteringsordningen). 
+                                                    // Annars returneras -sortOrder. orteringsvariabeln (sortOrder byter värde mellan varven 1x-1 = -1) (-1x-1= 1)
+                                                    // så trots lika useende i koden varje gång har de olika värden varannan gång vilket ändrar sorterings ordningen
+   // });                                                            
 
     sortOrder *= -1; // Växla sorteringsordning
-
     printCourses(courses); // Uppdatera tabellen
-    
     
 }
 
@@ -72,6 +77,18 @@ function printCourses(data) {
 //     data.sort((a, b) => a.code > b.code ? 1 : -1);
 //     console.table(data);
 // }
+
+function filterData(){
+    const filterOption = document.getElementById("filter").value;   
+
+    const filteredArr = courses.filter(course =>
+        course.coursename.toLowerCase().includes(filterOption.toLowerCase()) ||
+        course.code.toLowerCase().includes(filterOption.toLowerCase())
+    );
+
+    printCourses(filteredArr);
+}
+
 
 /* Datum i footern*/
 

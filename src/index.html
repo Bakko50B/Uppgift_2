@@ -39,15 +39,21 @@
         <section id="info">
             <h1 id="starttitle">Uppgift 2</h1>
             <div id="errormessage"></div>
+            <div>
+                <label for="filter" id="lblfilter">Välj data att visa <span class="hidden">(Kurskod eller namn)</span>  </label>
+                <input type="text" id="filter" name="filter" placeholder="filtrera på kurskod eller kursnamn">
+            </div>
 
-            <table id="courseTable">
-                <thead>
-                    <th id="courseCode" data-column="code" >Kurskod</th>                    <!-- Använder data.column för att hämta värdet till sorteringen -->
-                    <th id="courseName" data-column="coursename">Kursnamn</th>              <!-- Använder data.column för att hämta värdet till sorteringen -->
-                    <th id="courseProgression" data-column="progression">Progression</th>   <!-- Använder data.column för att hämta värdet till sorteringen -->
-                </thead>
-                <tbody id="courseTBody"></tbody>
-            </table>
+            <section id="tablesection">
+                <table id="courseTable">
+                    <thead>
+                        <th id="courseCode" data-column="code" >Kurskod</th>                    <!-- Använder data.column för att hämta värdet till sorteringen -->
+                        <th id="courseName" data-column="coursename">Kursnamn</th>              <!-- Använder data.column för att hämta värdet till sorteringen -->
+                        <th id="courseProgression" data-column="progression">Prog<span class="hidden">ression</span></th>
+                    </thead>
+                    <tbody id="courseTBody"></tbody>
+                </table>
+            </section>
 
 
 

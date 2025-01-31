@@ -181,18 +181,41 @@ footer {
     text-align: center;
 }
 
+#lblfilter{
+    display: block;
+}
+#filter {
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    width: auto;
+    margin: .5rem 0 2rem;
+}
+#filter::placeholder{
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
 #courseTable {
     width: 100%;
-    line-height: 1.5rem;
+    line-height: 1.9rem;
     
 }
 
-#courseTable th{
+#courseTable th {
     font-size: 1.5rem;
     cursor: pointer;
-
+    vertical-align: top;
+    padding-left: .5rem;   
+    background-color: var(--text-color);
+    color: white;
 }
 
+#courseTable td {
+    vertical-align: top;
+    border: .5px solid rgb(0, 0, 0); 
+    box-shadow: .2rem .2rem .4rem rgba(158, 158, 158, 0.719);   
+    padding-left: .5rem;    
+}
 
 #courseTable th:nth-child(2){
     text-align: left;
@@ -201,13 +224,13 @@ footer {
 #courseTable th:first-child,
 #courseTBody td:first-child{
     text-align: left;
-    padding-right: auto;
+    
 }
 
 
 #courseTable th:last-child,
 #courseTBody td:last-child{
-    text-align: right;
+    text-align: center;
 }
 
 #date{
@@ -231,7 +254,7 @@ footer {
 
 @media screen and (max-width: 600px) {
     body {
-        background-color: aqua;
+         font-size: 1rem;
     }
 
     header {
@@ -282,5 +305,20 @@ footer {
         /* white-space: pre-wrap;  */
         word-wrap: break-word; 
         /* overflow-wrap: break-word;  */
+      }
+
+      #tablesection {
+        overflow-x: auto;
+      }
+
+      #coursetable{
+        max-width: 98%;
+      }
+      #courseTable th{
+        font-size: 1rem;
+      }
+
+      .hidden{
+        display: none;
       }
 }
