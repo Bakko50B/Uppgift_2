@@ -28,6 +28,8 @@
     <header>
         <div class="headerlogo">
             <picture>
+                <source srcset="android-chrome-192x192.png?as=avif" type="image/avif" />
+                <source srcset="android-chrome-192x192.png?as=webp" type="image/webp" />
                 <img src="android-chrome-192x192.png" alt="logga">
             </picture>
             <h1>Frontend</h1>
@@ -46,16 +48,20 @@
             <h1 id="starttitle">Uppgift 2</h1>
             <div id="errormessage"></div>
             <div>
-                <label for="filter" id="lblfilter">Välj data att visa <span class="hidden">(Kurskod eller namn)</span>  </label>
+                <label for="filter" id="lblfilter">Välj data att visa <span class="hidden">(Kurskod eller namn)</span>
+                </label>
                 <input type="text" id="filter" name="filter" placeholder="kurskod/kursnamn">
             </div>
 
             <section id="tablesection">
                 <table id="courseTable">
                     <thead>
-                        <th id="courseCode" data-column="code" >Kurskod</th>                    <!-- Använder data.column för att hämta värdet till sorteringen -->
-                        <th id="courseName" data-column="coursename">Kursnamn</th>              <!-- Använder data.column för att hämta värdet till sorteringen -->
-                        <th id="courseProgression" data-column="progression">Prog<span class="hidden">ression</span></th>
+                        <th id="courseCode" data-column="code">Kurskod</th>
+                        <!-- Använder data.column för att hämta värdet till sorteringen -->
+                        <th id="courseName" data-column="coursename">Kursnamn</th>
+                        <!-- Använder data.column för att hämta värdet till sorteringen -->
+                        <th id="courseProgression" data-column="progression">Prog<span class="hidden">ression</span>
+                        </th>
                     </thead>
                     <tbody id="courseTBody"></tbody>
                 </table>
