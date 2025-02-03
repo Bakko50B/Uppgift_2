@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --primary-bg-color: #f1f1f1;    /* Färg*/
-    --header-color: #c4c4c4;        /* Färg*/
+    --primary-bg-color: #f1f1f1;
+    /* Färg*/
+    --header-color: #c4c4c4;
+    /* Färg*/
     --mainelement-color: #e7e7e7;
-    --infoelement-color:#fcfcfc; 
-    --nav-color:   #9b9b9b;         /* Färg*/
+    --infoelement-color: #fcfcfc;
+    --nav-color: #9b9b9b;
+    /* Färg*/
     --hover-color: #d8d6d4a8;
-    --active-color:#b0b0b0;         /* Färg*/
-    --footer-color: #c4c4c4;        /* Färg*/
-    --text-color: #333333;   
+    --active-color: #b0b0b0;
+    /* Färg*/
+    --footer-color: #c4c4c4;
+    /* Färg*/
+    --text-color: #333333;
 
 }
 
@@ -43,10 +48,38 @@ header {
     height: fit-content;
 }
 
+
+.headerlogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.headerlogo picture {
+    padding: 10px;
+    position: absolute;
+    left: 22.5%;
+    /* top: 10px; */
+}
+
+
+.headerlogo picture img {
+    width: 50%;
+}
+
+.headerlogo h1 {
+    align-self: center;
+}
+
 header h1 {
-    text-align: center;
-    margin: 2rem 0 2rem;
+    /* text-align: center; */
+    /* vertical-align: middle; */
+    margin: auto;
     font-size: 4rem;
+
 }
 
 header ul {
@@ -69,13 +102,15 @@ header ul li {
     margin: 0;
     /* display: inline-block; */
 }
-header ul li:active{
+
+header ul li:active {
     background-color: var(--active-color);
 }
 
-.activelink{
+.activelink {
     background-color: var(--active-color);
 }
+
 .activelink a {
     /* color: rgb(82, 78, 78); */
     /* font-style: italic; */
@@ -109,14 +144,14 @@ p {
 }
 
 h2,
-h3{
-    margin: 1rem 0 .15rem 0; 
+h3 {
+    margin: 1rem 0 .15rem 0;
 }
 
 #starttitle {
     text-align: center;
     font-size: 2.5rem;
-    margin: 1rem auto .5rem; 
+    margin: 1rem auto .5rem;
 }
 
 /* index-html*/
@@ -125,18 +160,19 @@ h3{
     width: 80%;
     border-radius: 5px;
     margin: 0 auto;
-    padding: 1rem ;
+    padding: 1rem;
     /* padding-left: 10rem; */
     background-color: var(--infoelement-color);
     box-shadow: 10px 5px 25px rgba(37, 34, 34, 0.441);
 }
-#info ul{
+
+#info ul {
     margin-left: 1.5em;
     line-height: 1.5rem;
     font-size: 1.2rem;
 }
 
-.margintop{
+.margintop {
     margin-top: 2rem;
 }
 
@@ -149,7 +185,7 @@ h3{
     max-width: 100%;
 }
 
-code{
+code {
     background-color: rgba(255, 255, 255, 0.317);
     display: block;
     font-family: 'Courier New', Courier, monospace;
@@ -159,14 +195,16 @@ code{
     border-radius: 10px;
     padding: .5rem;
 }
-cite{
+
+cite {
     font-style: italic;
     font-weight: bold;
 }
 
-.indent{
-    margin-left: 1.3rem;  
+.indent {
+    margin-left: 1.3rem;
 }
+
 footer {
     background-color: var(--footer-color);
     flex-direction: column;
@@ -177,20 +215,22 @@ footer {
     height: 4em;
     margin: 0 auto;
     display: flex;
-    padding: 2rem 1rem;    
+    padding: 2rem 1rem;
     text-align: center;
 }
 
-#lblfilter{
+#lblfilter {
     display: block;
 }
+
 #filter {
     line-height: 1.5rem;
     font-size: 1.2rem;
     width: auto;
     margin: .5rem 0 2rem;
 }
-#filter::placeholder{
+
+#filter::placeholder {
     font-style: italic;
     font-size: 1.2rem;
 }
@@ -198,55 +238,63 @@ footer {
 #courseTable {
     width: 100%;
     line-height: 1.9rem;
-    
+
 }
 
 #courseTable th {
     font-size: 1.5rem;
     cursor: pointer;
     vertical-align: top;
-    padding-left: .5rem;   
+    padding-left: .5rem;
     background-color: var(--text-color);
     color: white;
 }
 
 #courseTable td {
     vertical-align: top;
-    border: .5px solid rgb(0, 0, 0); 
-    box-shadow: .2rem .2rem .4rem rgba(158, 158, 158, 0.719);   
-    padding-left: .5rem;    
+    border: .5px solid rgb(0, 0, 0);
+    box-shadow: .2rem .2rem .4rem rgba(158, 158, 158, 0.719);
+    padding-left: .5rem;
 }
 
-#courseTable th:nth-child(2){
+#courseTable th:nth-child(2) {
     text-align: left;
 }
 
 #courseTable th:first-child,
-#courseTBody td:first-child{
+#courseTBody td:first-child {
     text-align: left;
-    
+
 }
 
 
 #courseTable th:last-child,
-#courseTBody td:last-child{
+#courseTBody td:last-child {
     text-align: center;
 }
 
-#date{
+#date {
     display: inline;
     margin: auto;
 }
 
 @media screen and (max-width: 1100px) {
-    #info{
+    #info {
         width: 92%;
+    }
+
+    .headerlogo picture {
+        left: 8%;
+    }
+
+    .headerlogo picture img {
+        width: 40%;
     }
 
 }
 
 @media screen and (max-width: 900px) {
-    #info{
+    #info {
         width: 96%;
     }
 
@@ -254,7 +302,7 @@ footer {
 
 @media screen and (max-width: 600px) {
     body {
-         font-size: 1rem;
+        font-size: 1rem;
     }
 
     header {
@@ -263,6 +311,15 @@ footer {
 
     header h1 {
         font-size: 1.8rem;
+    }
+
+    .headerlogo picture {
+        left: 2%;
+        top: 0;
+    }
+
+    .headerlogo picture img {
+        width: 20%;
     }
 
     ul li a {
@@ -277,7 +334,7 @@ footer {
     #starttitle {
         text-align: center;
         font-size: 1.4rem;
-        margin: 1rem auto .5rem; 
+        margin: 1rem auto .5rem;
     }
 
     p {
@@ -286,11 +343,12 @@ footer {
         line-height: 1.35rem;
         letter-spacing: normal;
     }
-    
+
     h2 {
         font-size: 1.3rem;
     }
-    h3{
+
+    h3 {
         font-size: 1.2rem;
     }
 
@@ -298,27 +356,29 @@ footer {
         font-size: 1.4rem;
     }
 
-    #info{
+    #info {
         width: 98%;
     }
+
     code {
         /* white-space: pre-wrap;  */
-        word-wrap: break-word; 
+        word-wrap: break-word;
         /* overflow-wrap: break-word;  */
-      }
+    }
 
-      #tablesection {
+    #tablesection {
         overflow-x: auto;
-      }
+    }
 
-      #coursetable{
+    #coursetable {
         max-width: 98%;
-      }
-      #courseTable th{
-        font-size: 1rem;
-      }
+    }
 
-      .hidden{
+    #courseTable th {
+        font-size: 1rem;
+    }
+
+    .hidden {
         display: none;
-      }
+    }
 }

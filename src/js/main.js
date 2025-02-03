@@ -5,9 +5,14 @@ let sortOrder = 1; // 1 = stigande, -1 = fallande
 
 window.onload = () => {
     getCourses();
-    document.getElementById("filter").addEventListener("input", filterData);
+    
 }
-
+// egen variabel för att köra koll på andra sidor
+const myFilterEl = document.getElementById("filter");
+// Sätter eventlistener om elementet finns
+if(myFilterEl){
+    myFilterEl.addEventListener("input", filterData);
+}
 
 
 document.querySelectorAll("th[data-column]").forEach(th => {
@@ -21,14 +26,7 @@ document.querySelectorAll("th[data-column]").forEach(th => {
 function sortCourses(column) {
     
     courses.sort((a, b) => (a[column] > b[column] ? sortOrder : -sortOrder));
-    //0courses.sort((a, b) => {
-    //    let valA = a[column];
-    //    let valB = b[column];
-
-      //  return valA > valB ? sortOrder : -sortOrder; //Om a[column] är större än b[column], returneras sortOrder  (1 eller -1 beroende på den aktuella sorteringsordningen). 
-                                                    // Annars returneras -sortOrder. orteringsvariabeln (sortOrder byter värde mellan varven 1x-1 = -1) (-1x-1= 1)
-                                                    // så trots lika useende i koden varje gång har de olika värden varannan gång vilket ändrar sorterings ordningen
-   // });                                                            
+                                                             
 
     sortOrder *= -1; // Växla sorteringsordning
     printCourses(courses); // Uppdatera tabellen
