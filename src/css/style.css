@@ -226,8 +226,9 @@ footer {
 #filter {
     line-height: 1.5rem;
     font-size: 1.2rem;
-    width: auto;
+    max-width: 80%;
     margin: .5rem 0 2rem;
+    padding: .2rem;
 }
 
 #filter::placeholder {
