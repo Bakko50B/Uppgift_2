@@ -68,6 +68,7 @@ header {
 
 .headerlogo picture img {
     width: 50%;
+    filter: grayscale(70%);
 }
 
 .headerlogo h1 {
